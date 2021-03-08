@@ -1,0 +1,53 @@
+.menu-wrapper {
+  height: 30px;
+  border-bottom: 1px solid #ccc;
+  padding-left: 10px;
+}
+
+.menu-wrapper > div {
+  position: relative;
+  width: 40px;
+  padding: 5px 0;
+  text-align: center;
+  display: inline-block;
+}
+
+.menu-wrapper > div:hover {
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+.menu-wrapper > div:hover > .menu-item-container{
+  display: inline-block;
+}
+
+.menu-item-container{
+  width: 40px;
+  padding: 5px 0;
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  text-align: center;
+  border: 1px solid #eee;
+  line-height: 20px;
+  background-color: #fff;
+  display: none;
+}
+
+.menu-item-container > div:hover{
+  background: #f9f9f9;
+}
+
+.menu-item-container i{
+  cursor: pointer;
+}
+
+.text-wrapper {
+  padding-top: 10px;
+  border: none !important;
+  text-indent: 1rem;
+}
+
+.text-wrapper:focus {
+  outline: none;
+}

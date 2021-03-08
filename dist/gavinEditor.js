@@ -1,0 +1,1 @@
+!function(){function t(t){if(this.id="Editor_1",!t)throw new Error("传入Dom为空!!");this.$containerDom=t}t.prototype.create=function(){},t.prototype.initSelect=function(){}}();
