@@ -11,7 +11,7 @@ class Editor {
     public $containerDom: HTMLElement //用户传入，用于挂着编辑器的容器
     public $menuDom: Menu
     public $textDom:Text // 编辑区Dom元素
-    public $rangeCatch: Range
+    public $rangeCache: Range
 
     constructor(id: string) {
         const containerDom: HTMLElement = document.getElementById(id)

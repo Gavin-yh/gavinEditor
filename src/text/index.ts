@@ -28,7 +28,7 @@ export class Text {
     //TODO 保存选区的内容，执行相应的命令
 
     this.TextContainer.addEventListener("mouseup", e => {
-        this.editor.$rangeCatch = window.getSelection().getRangeAt(0)
+        this.editor.$rangeCache = window.getSelection().getRangeAt(0)
     })
   }
 }

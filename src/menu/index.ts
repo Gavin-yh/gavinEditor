@@ -144,8 +144,8 @@ export class Menu {
      let select = window.getSelection()
 
      select.removeAllRanges()
-     if (this.editor.$rangeCatch) {
-      select.addRange(this.editor.$rangeCatch)
+     if (this.editor.$rangeCache) {
+      select.addRange(this.editor.$rangeCache)
      }
       
      document.execCommand(command, false, value)
