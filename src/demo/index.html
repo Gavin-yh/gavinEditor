@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div { 
+      width: 500px;
+      height: 600px;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+ <div id="div" contenteditable=""></div> 
+ <script>
+    function createSpan() {
+      const span = document.createElement('span');
+      span.style['color'] = 'red'
+
+      return span
+    }
+    document.getElementById('div') .onmouseup = function() {
+      let select = window.getSelection()
+      const anchorNode = select.anchorNode;
+      let range = select.getRangeAt(0)
+      console.log(select)
+      if (range) {
+        const fragment = range.extractContents(); // 把 Range 的内容从文档树移动到一个文档片段中。
+ 
+        const span = createSpan()
+        console.log(fragment)
+        span.appendChild(fragment)
+
+        range.insertNode(span); //在 Range 的起点处插入一个节点。
+        // anchorNode.style.color = 'red'
+        // select.selectAllChildren(span) //将某一指定节点的子节点框入选区。
+      }
+    }
+
+    // 1. 缓存选区
+    // 2. 创建标签
+
+    // 重点关注
+    // selection 选区的api
+    // range范围的api
+ </script>
+</body>
+</html>

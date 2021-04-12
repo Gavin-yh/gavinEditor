@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <textarea></textarea>
+    </form> 
+
+    <script>
+        const form = document.querySelector('form');
+        const textarea = document.querySelector('textarea');
+
+        form.addEventListener('awesome', e => console.log(e.detail.text()));
+
+        textarea.addEventListener('input', function() {
+            this.dispatchEvent(
+                new CustomEvent('awesome', 
+                    { 
+                        bubbles: true, 
+                        detail: { 
+                            text: () => textarea.value 
+                        } 
+                    }
+                )
+            )
+        });
+    </script>
+</body>
+</html>
