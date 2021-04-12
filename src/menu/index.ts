@@ -147,8 +147,10 @@ export class Menu {
      if (this.editor.$rangeCache) {
       select.addRange(this.editor.$rangeCache)
      }
-      
+    
+     //废弃这个api
      document.execCommand(command, false, value)
+     
    })
   }
 }
